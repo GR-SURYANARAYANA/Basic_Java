@@ -10,6 +10,7 @@ public class Practice2BitAdvance {
     public static void main(String[] args) {
        String []text= {"Abrocadabro","Agracadagra"};
        String regex="\\w(?<name>\\w{3})\\w+(\\k<name>)";
+        //or String regex="\\w(?<name>\\w{3})\\w+(\\1)";
         for (String x:text) {
             Pattern pat=Pattern.compile(regex,Pattern.COMMENTS);
             Matcher mat= pat.matcher(x);
